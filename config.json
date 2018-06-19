@@ -1,0 +1,11 @@
+{
+    "steem": {
+        "account": "nero12",
+        "posting_key": ""
+    },
+    "mysql": {
+        "user": "root",
+        "password": "",
+        "db": "steem_bot"
+    }
+}
