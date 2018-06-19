@@ -1,6 +1,32 @@
 /*
- * co minute poszukuj artykułów
- * jak znajdziesz wpis upvote za 2 minuty + 4s pozniej dla kazdego kolejnego
+Co dopisać:
+- error.log
+- offset
+- sprawdzanie czy inne boty zagłosowały
+
+
+
+ * MySQL (Database structure)
+ * USERS (users whose articles should be upvoted):
+ * id
+ * account (steem account name),
+ * upvote_strength (1-100)
+ * upvote_time_offset (difference in seconds from 30 minutes delay to upvote)
+ * 
+ * ARTICLES (articles which should be upvoted):
+ * id
+ * permlink (steem article permlink)
+ * account_name (account which authored artice)
+ * upvote_strength (1-100)
+ * done (if article was upvoted)
+ * 
+ * BOTS (bots before which should be applied upvote_time_offset in order to vote before):
+ * id
+ * account_name
+ * 
+ * 
+ * 
+ * 
  * 
  * 
  * 
@@ -13,6 +39,8 @@ var SteemBot = require('./steembot');
 
 
 // Co 5 minut skanuj (zmień, teraz minuta)
+
+// Scan Blockchain every 5 minutes in order to find new articles to upvote
 //var articles_search = new CronJob('0 */1 * * * *', function(){
 //    SteemBot.scan();
 //}, null, true, null, null, true);
