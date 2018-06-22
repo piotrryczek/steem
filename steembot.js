@@ -1,9 +1,9 @@
-var steem = require('steem');
-var mysql = require('mysql');
-var CronJob = require('cron').CronJob;
-var fs = require('fs');
-var UpvoteTasks = require('./upvote_tasks');
-var logger = require('./steemlog');
+const steem = require('steem');
+const mysql = require('mysql');
+const CronJob = require('cron').CronJob;
+const fs = require('fs');
+const UpvoteTasks = require('./upvote_tasks');
+const logger = require('./steemlog');
 
 class SteemBot {
 
