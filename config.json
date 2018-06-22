@@ -1,7 +1,7 @@
 {
     "steem": {
-        "account": "nero12",
-        "posting_key": ""
+        "account_name": "tutezsieukrywam",
+        "posting_key": "5K8ma9G8wt7FcfqHucR3uCmNanwF3JJM9MQ9eixCtGbkRBibQbc"
     },
     "mysql": {
         "user": "root",
